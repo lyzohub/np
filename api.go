@@ -39,7 +39,7 @@ func getNamedMutex(key string) *sync.Mutex {
 
 func handleCommand(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
-		writeJSON(w, APIError{Error: "Method not allowed"}, http.StatusInternalServerError)
+		writeJSON(w, APIError{Error: "Method not allowed"}, http.StatusBadRequest)
 		return
 	}
 

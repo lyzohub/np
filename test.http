@@ -1,0 +1,17 @@
+### Test the POST endpoint with valid JSON
+POST http://localhost:8080/cmd
+Content-Type: application/json
+
+{
+    "cmd": "example",
+    "id": 12
+}
+
+### Test the POST endpoint with invalid JSON
+POST http://localhost:8080/cmd
+Content-Type: application/json
+
+{
+    "cmd": "example,
+    "id": 12
+}
